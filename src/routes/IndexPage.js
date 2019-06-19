@@ -1,8 +1,53 @@
 import React from 'react';
 import { connect } from 'dva';
-import t from '../assets/yay.jpg'
+import t from "../assets/index2.png"
+import b from "../assets/baojie2.png"
+import k from "../assets/kanhu2.png"
+import x from "../assets/xihu3.png"
+import y from "../assets/yuesao1.png"
+import q from "../assets/Donute.png"
+
+import xiyi from "../assets/xiyi.png"
+import youyanji from "../assets/youyanji.png"
+
+
+
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
+import { Grid  } from 'antd-mobile';
+
+
+
+const data = [{
+  icon: x,  
+  text: `洗护`
+},{
+  icon: b,  
+  text: `保洁`
+},{
+  icon: k,  
+  text: `看护`
+},{
+  icon: y,  
+  text: `月嫂`
+},{
+  icon: q,  
+  text: `其他`
+}
+]
+
+
+const data1 = [{
+  icon: xiyi,  
+  text: `洗衣`
+},{
+  icon: youyanji,  
+  text: `清洗油烟机`
+},{
+  icon: '',  
+  text: `更多热门服务`
+}
+]
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -11,12 +56,10 @@ class IndexPage extends React.Component {
       categories:[]
     }
   }
-
   // 当前组件绑定到根组件上执行【生命周期钩子】
   componentDidMount(){
     this.loadCategory();
   }
-
   loadCategory(){
     axios.get('/category/findAll')
     .then((result)=>{
@@ -33,32 +76,22 @@ class IndexPage extends React.Component {
 
   render(){
     return (
-      <div>
+          
+        <div>
+        
         {/* 图片广告 */}
         <div className={styles.photoWall}>
-          <img className={styles.photo} src={t}/>
+          <img className={styles.photo} src={t} alt="加载失败"/>
         </div>
-        {/* 栏目 */}
-        <div>
-          <ul className={styles["category_list"]}>
-            {
-              this.state.categories.map((item)=>{
-                return (
-                  <li 
-                    onClick={this.toProduct.bind(this)} 
-                    key={item.id} 
-                    className={styles["category_list_item"]}>
-                    <div></div>
-                    <div>{item.name}</div>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
+    {/* 栏目 */}
+    <div className="sub-title1"></div>
+           <Grid data={data} isCarousel onClick={_el => console.log(_el)} />
         {/* 产品 */}
         <div>
-  
+        <div className="sub-title2"></div>
+          <Grid data={data1} columnNum={3} itemStyle={{ height: '80px', background: 'rgba(0,0,0,.05)' }} />
+
+
         </div>
       </div>
     );
