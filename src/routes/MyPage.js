@@ -4,9 +4,9 @@ import styles from './MyPage.css'
 
 const tabs = [
   { title: <Badge dot>全部订单</Badge> },
-  { title: <Badge dot>待付款</Badge> },
-  { title: <Badge dot>待服务</Badge> },
-  { title: <Badge dot>待评价</Badge> },
+  { title: <Badge text={'6'}>待付款</Badge> },
+  { title: <Badge text={'2'}>待服务</Badge> },
+  { title: <Badge text={'3'}>待评价</Badge> }
 ];
 
 
