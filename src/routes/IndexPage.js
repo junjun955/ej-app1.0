@@ -84,11 +84,15 @@ class IndexPage extends React.Component {
         </div>
     {/* 栏目 */}
     <div className="sub-title1"></div>
-           <Grid data={data} isCarousel onClick={_el => console.log(_el)} />
+           <Grid data={data} isCarousel onClick={this.toProduct.bind(this)} 
+
+/>
         {/* 产品 */}
         <div>
         <div className="sub-title2"></div>
-          <Grid data={data1} columnNum={3} itemStyle={{ height: '80px', background: 'rgba(0,0,0,.05)' }} />
+          <Grid data={data1} columnNum={3} itemStyle={{ height: '80px', 
+
+background: 'rgba(0,0,0,.05)' }} />
 
 
         </div>
