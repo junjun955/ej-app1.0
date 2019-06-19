@@ -2,8 +2,8 @@ import axios from 'axios';
 import {Toast} from 'antd-mobile'
 import qs from 'qs'
 // 1. axios的默认配置
-//axios.defaults.baseURL = "http://localhost:8888"//可以修改成服务器上的地址
-axios.defaults.baseURL = "http://152.136.136.220:8888"
+axios.defaults.baseURL = "http://localhost:8888"//可以修改成服务器上的地址
+//axios.defaults.baseURL = "http://152.136.136.220:8888"
 axios.defaults.headers["Content-Type"]= "application/x-www-form-urlencoded";
 
 
