@@ -78,13 +78,13 @@ class App extends React.Component {
                 icon={<div style={{
                   width: '22px',
                   height: '22px',
-                  background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+                  background: 'url(https://i.loli.net/2019/06/19/5d0a36f8066a370277.png) center center /  21px 21px no-repeat' }}
                 />
                 }
                 selectedIcon={<div style={{
                   width: '22px',
                   height: '22px',
-                  background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+                  background: 'url(https://i.loli.net/2019/06/19/5d0a37444814580678.png) center center /  21px 21px no-repeat' }}
                 />
                 }
                 selected={this.state.selectedTab === 'index'}
@@ -99,14 +99,14 @@ class App extends React.Component {
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(https://i.loli.net/2019/06/19/5d0a349f972d427995.png) center center /  21px 21px no-repeat' }}
                   />
                 }
                 selectedIcon={
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(https://i.loli.net/2019/06/19/5d0a35689c0a727869.png) center center /  21px 21px no-repeat' }}
                   />
                 }
                 title="订单"
@@ -123,14 +123,14 @@ class App extends React.Component {
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(https://i.loli.net/2019/06/19/5d0a36a11f72488525.png) center center /  21px 21px no-repeat' }}
                   />
                 }
                 selectedIcon={
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(https://i.loli.net/2019/06/19/5d0a36c25907939911.png) center center /  21px 21px no-repeat' }}
                   />
                 }
                 title="帮助"
@@ -142,8 +142,8 @@ class App extends React.Component {
                  {this.renderContent()}
               </TabBar.Item>
               <TabBar.Item
-                icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                icon={{ uri: 'https://i.loli.net/2019/06/19/5d0a38f0386f420335.png' }}
+                selectedIcon={{ uri: 'https://i.loli.net/2019/06/19/5d0a3908a278976459.png' }}
                 title="我的"
                 key="my"
                 selected={this.state.selectedTab === 'my'}
