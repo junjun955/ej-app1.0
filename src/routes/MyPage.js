@@ -13,11 +13,6 @@ const tabs = [
 class MyPage extends React.Component {
 
   render(){
-    const TabExample = () => (
-     <div>
-       
-     </div>
-    );
     return (
       <div>
         <div>
