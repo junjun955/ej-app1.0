@@ -17,7 +17,12 @@ class App extends React.Component {
   renderContent(pageText) {
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        <p>{pageText}</p>        
+         <div className={styles.content}>
+          {/* 动态路由 */}
+          {
+            this.props.children
+          }
+        </div>        
       </div>
     );
   }
@@ -58,14 +63,10 @@ class App extends React.Component {
   render(){
     return (
       <div className={styles.app}>
-        <div className={styles.content}>
-          {/* 动态路由 */}
-          {
-            this.props.children
-          }
-        </div>
+       
           {/* 导航 */}
         <TabBar
+              className={styles.tabBar}
               unselectedTintColor="#949494"
               tintColor="#33A3F4"
               barTintColor="white"
@@ -91,6 +92,7 @@ class App extends React.Component {
                 onPress={this.handlerTabChange.bind(this,'index')}
                 data-seed="logId"
               >
+                {this.renderContent()}
               </TabBar.Item>
               <TabBar.Item
                 icon={
@@ -114,6 +116,7 @@ class App extends React.Component {
                 onPress={this.handlerTabChange.bind(this,'order')}
                 data-seed="logId1"
               >
+                 {this.renderContent()}
               </TabBar.Item>
               <TabBar.Item
                 icon={
@@ -136,6 +139,7 @@ class App extends React.Component {
                 selected={this.state.selectedTab === 'help'}
                 onPress={this.handlerTabChange.bind(this,'help')}
               >
+                 {this.renderContent()}
               </TabBar.Item>
               <TabBar.Item
                 icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
@@ -145,6 +149,7 @@ class App extends React.Component {
                 selected={this.state.selectedTab === 'my'}
                 onPress={this.handlerTabChange.bind(this,'my')}
               >
+                 {this.renderContent()}
               </TabBar.Item>
         </TabBar>
       </div>
