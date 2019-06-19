@@ -11,7 +11,6 @@ import xiyi from "../assets/xiyi.png"
 import youyanji from "../assets/youyanji.png"
 
 
-
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
 import { Grid  } from 'antd-mobile';
