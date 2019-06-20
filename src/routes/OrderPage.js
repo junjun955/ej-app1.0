@@ -1,5 +1,5 @@
 import React from 'react'
-import { List,Tabs,SearchBar, WhiteSpace, WingBlank, Stepper  } from 'antd-mobile';
+import { List,Tabs,SearchBar, WhiteSpace, WingBlank} from 'antd-mobile';
 import { connect } from 'dva';
 import styles from './OrderPage.css'
 import axios from '../utils/axios'
@@ -36,26 +36,24 @@ class OrderPage extends React.Component {
   }  
   render(){
     return (
-      <div  className={styles["widow"]}>
+      //搜索栏和左侧导航
+     <div  className={styles["widow"]}>
      <div>
-     <div>
-      <WingBlank><div className="sub-title"></div></WingBlank>
-      <SearchBar placeholder="自动获取光标" ref={ref => this.autoFocusInst = ref} />
-      <WhiteSpace />
-      </div>
-    <WhiteSpace />
-    <Tabs tabs={tabs}
-      initialPage={'t1'}
-      tabBarPosition="left"
-      tabDirection="vertical"
-    >
-      
-      <div>
-          <ul className={styles["category_list"]}>
-            {
-              this.state.orders.map((item)=>{
-                return (            
-       <List>
+          <div>
+          <WingBlank><div className="sub-title"></div></WingBlank>
+          <SearchBar placeholder="自动获取光标" ref={ref => this.autoFocusInst=ref} />    
+          </div> 
+      <Tabs tabs={tabs}
+        initialPage={'t1'}
+        tabBarPosition="left"
+        tabDirection="vertical"
+      >     
+    <div>
+    <ul className={styles["category_list"]}>
+        {
+          this.state.orders.map((item)=>{
+           return (            
+          <List>
             <li 
             className={styles["category_list_item"]}>
                    <div> <img width={50} height={50} src={"http://134.175.154.93:8888/group1/"+item.photo}/> 
@@ -63,16 +61,18 @@ class OrderPage extends React.Component {
                     {"RMB："+item.price}
                    </div> 
             </li>      
-      </List>                  
+          </List>                  
                 )
               })
             }
-          </ul>
+     </ul>
         </div>
     </Tabs>
-    <WhiteSpace />
+    
   </div>        
+ 
       </div>
+      
     );
   }
 }
