@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { SearchBar, WhiteSpace, WingBlank } from 'antd-mobile';
 import { connect } from 'dva';
 import styles from './OrderPage.css'
 import axios from '../utils/axios'
@@ -27,15 +27,16 @@ class OrderPage extends React.Component {
        orders:result.data
       })
     });
-  }
-
+  }  
   
-  
-
   render(){
     return (
       <div>
-        
+        <div>
+        <WingBlank><div className="sub-title"></div></WingBlank>
+      <SearchBar placeholder="自动获取光标" ref={ref => this.autoFocusInst = ref} />
+      <WhiteSpace />
+      </div>
         {/* 栏目 */}
         <div>
           <ul className={styles["category_list"]}>
@@ -45,7 +46,7 @@ class OrderPage extends React.Component {
                   <li 
                    className={styles["category_list_item"]}>
                      <div> <img width={60} height={60} src={"http://134.175.154.93:8888/group1/"+item.photo}/> 
-                    {item.name}{item.price}
+                    {item.name+' \n '}{item.price+' \n '}
                     {item.description} 
                     </div> 
                   </li>
